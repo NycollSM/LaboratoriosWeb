@@ -1,0 +1,88 @@
+//variables fonts 
+$font-paragraphs:  'Open Sans', sans-serif;
+$font-titles: 'Libre Baskerville', serif;
+
+//colors 
+$color-titles: #A6D3A0;
+$color-hoverTitles:#808782;
+$color-subtitles:#52489c;
+$color-paragraphs:#656565;
+*{
+    margin: 0;
+    padding: 0;
+}
+//general styles 
+body{
+    padding: 0 2%;
+    font-size: 1em;
+}
+h1{
+    font-family: $font-titles;
+    color: black;
+    text-align: center;
+    font-size: 2em; 
+    padding-top: 40px;
+    text-decoration: underline;
+}
+h2,h3,h4,h5{
+    color: $color-subtitles;
+    font-family: $font-titles;
+}
+p{
+    color: $color-paragraphs;
+}
+.content{
+   // margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15% auto 15% 10%;
+    grid-gap: 15px;
+    text-align: center;
+} 
+header{
+    grid-column: 1/ span 3;
+    grid-row: 1/ 2;
+    height: 150px;
+    text-align: center;
+    background-position: bottom;
+    border-bottom: 1px solid #656565;
+}
+  
+h4{
+    text-align: center;
+}
+
+footer{
+    background: #52489c;
+    height: 100px;
+    grid-column: 1/ span 3;
+    grid-row: 4/4;
+}
+.mainContent{
+    grid-column: 1/ span 3;
+    grid-row: 2/3;
+}
+.slidebar{
+    background: green;
+    grid-row: 3/3;
+    grid-column: 1/ 4;
+}
+.related-posts{
+    border-top: 10px black solid;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+  }
+  .related-posts h2{
+    color: black;
+    margin: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.related-post img{
+    height: auto;
+    max-width: 100%;
+}
+.related-post{
+    padding: 2%;
+}

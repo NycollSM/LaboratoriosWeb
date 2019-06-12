@@ -1,0 +1,126 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,700&display=swap");
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif; }
+  @media (min-width: 768px) {
+    body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px; }
+
+label::after {
+  content: ":"; }
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 1em;
+  border: 1px solid black; }
+
+input[type="submit"] {
+  padding: 5px 15px;
+  font-size: 1em;
+  background-color: #ccc;
+  font-weight: 700; }
+
+.site-header {
+  background-color: #ccc;
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .site-header {
+      grid-column: 1 / span 3;
+      text-align: center; } }
+
+.services {
+  padding: 20px; }
+
+.services__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px; }
+  @media (min-width: 768px) {
+    .services__inner {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column: 1 / span 3; } }
+
+.services__title {
+  grid-column: 1 / span 2; }
+  @media (min-width: 768px) {
+    .services__title {
+      grid-column: 1 / span 3; } }
+
+.services h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 1em; }
+  @media (min-width: 768px) {
+    .services h3 {
+      padding-top: 100px; } }
+
+@media (min-width: 768px) {
+  .testimonials {
+    grid-column: 1/ span 3;
+    text-align: center; } }
+
+.testimonials__inner {
+  padding: 20px;
+  background-color: #eee; }
+
+.testimonial {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.125em;
+  margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .testimonial {
+      text-align: left;
+      float: left;
+      padding: 20px;
+      width: 240px; } }
+
+.testimonial__person {
+  font-size: 0.875em;
+  font-style: normal;
+  margin-top: 10px; }
+
+.testimonial__person img {
+  max-width: 50px;
+  vertical-align: middle;
+  margin-right: 10px; }
+  @media (min-width: 768px) {
+    .testimonial__person img {
+      min-width: 150px;
+      padding-top: 10px; } }
+
+@media (min-width: 768px) {
+  .contact {
+    grid-column: 1/ span 3; } }
+
+.contact__inner {
+  padding: 20px; }
+
+@media (min-width: 768px) {
+  .contact__title {
+    text-align: center; } }
+
+.contact__item {
+  margin-bottom: 20px; }
+
+/*# sourceMappingURL=style.css.map */

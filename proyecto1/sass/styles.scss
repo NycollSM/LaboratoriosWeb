@@ -1,0 +1,15 @@
+$font: 'Josefin Sans', sans-serif;
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: $font;
+    background: url('../img/img2.jpg');
+}
+
+header{
+    grid-column: 1/ span 2;
+    text-align: center;
+    color: yellow;
+    font-weight: bold;
+    letter-spacing: 3px;
+}

@@ -1,0 +1,16 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Josefin Sans", sans-serif;
+  background: url("../img/img2.jpg");
+}
+
+header {
+  grid-column: 1/span 2;
+  text-align: center;
+  color: yellow;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -3,6 +3,7 @@ $font--album: 'Reenie Beanie', cursive;;
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 img{
     max-width: 100%;
@@ -31,12 +32,18 @@ img{
         display: block;
         grid-column: 1/2;
         grid-row: 1/span 3;
+        align-items: end;
     }
 }
 .title--desktop h2{
+    height: 100%;
+    color: #E3A53A;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 28px;
+    text-transform: capitalize;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    color: #E3A53A;
 }
 .title{
     background: #251D46;
@@ -51,8 +58,7 @@ img{
     @media (min-width:1200px){
         background: #251D46;
         grid-column: 3/3;
-    }
-   
+    } 
 }
 h1{ 
     text-align: right;
@@ -108,7 +114,7 @@ h1{
     background: #251D46;
     color: #E3A53A;
     grid-column: 1/span 2;
-    grid-row: 2/ 3;
+    grid-row: 2/span 3;
     text-align: left;
     z-index: 1;
     @media (min-width:768px){
@@ -170,7 +176,6 @@ h4{
     position: relative;
     width: 200px;
     @media (min-width:768px){
-     //   background: url('../img/img4.jpg');
         filter: blur(2px);
         -webkit-filter: blur(1px);
         grid-column: 2/ 2;
@@ -181,7 +186,10 @@ h4{
     @media (min-width:1200px){
         background: #E3A53A;
         grid-column: 3/4;
-        grid-row: 3/3;
+        grid-row: 2/span 3;
+        align-self: center;
+        margin: 0 auto;
+        margin-top: 300px; 
         width: 400px;
         height: 400px;
     }
@@ -217,6 +225,22 @@ h4{
 
     } 
 }
-.tickets--right{
+.tickets--desktop{
     display: none;
+    @media (min-width:1200px){
+        display: block;
+        grid-column: 5/5;
+        grid-row: 1/span 3;
+        font-family: $font--title;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        letter-spacing: 7px;
+        text-transform: capitalize;
+        color: #E3A53A;
+        align-items: end;
+        font-size: 70px;
+    }
+}
+.tickets--desktop h2{
+    text-align: center;
 }

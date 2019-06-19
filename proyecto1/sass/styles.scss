@@ -9,16 +9,36 @@ img{
     height: auto;
 }
 .content{
-    background: #251D46;
     grid-gap:4px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr auto; 
+    @media (min-width:768px){
+        padding: 1em 0;
+        background: #E3A53A;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr auto 1fr;
+    }
+    @media (min-width:1200px){
+        background: #251D46;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr auto 1fr;
+    }
 }
 .title{
+    background: #251D46;
     text-align: center;
     grid-column: 2/ 2;
     grid-row: 1/ 1;
+    @media(min-width: 768px){
+        background: #E3A53A;
+        grid-column: 2/ 2;
+        grid-row: 1/ 2;
+    }
+    @media (min-width:1200px){
+        background: #251D46;
+    }
+   
 }
 h1{ 
     text-align: right;
@@ -27,13 +47,32 @@ h1{
     text-transform: capitalize;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    color: #E3A53A;
+    color: #E3A53A; 
+    @media (min-width:768px){
+   margin-top: 30px;
+       color: #39566B; 
+      writing-mode: initial;
+      transform: inherit;
+      font-size: 4em;
+      text-align: left;
+      line-height: 1.3em;
+    }
+    @media (min-width:1200px){
+        color: #E3A53A
+    }
 }
 .album{
-    //background: #251D46;
+    background: #251D46;
     grid-column: 1/ 2;
     grid-row: 1/ 1;
     margin: 0 auto;
+    @media (min-width:768px){
+        background: #E3A53A;
+        grid-column: 2/2;
+        grid-row: 1/1;
+        margin-top: 180px;
+        float: right;
+    }
 }
 .album h3{
     text-transform: capitalize;
@@ -42,6 +81,10 @@ h1{
     font-family: $font--album;
     color: #E95600;
     font-size:50px;
+    @media (min-width:768px){
+        font-size: 5em;
+        color: #39566B;
+    }
 }
 .date{
     padding: 0.4em;
@@ -50,8 +93,16 @@ h1{
     grid-column: 1/span 2;
     grid-row: 2/ 3;
     text-align: left;
+    z-index: 1;
+    @media (min-width:768px){
+        width: 90%;
+        background: #E95600;
+        height: 230px;
+        grid-row: 2/ 3;
+    }
 }
 h4{
+    font-weight: bolder;
     padding: 20px;
     text-align:left;
     font-size: 2em;
@@ -60,9 +111,28 @@ h4{
     font-family: $font--title;
 }
 .album--img{
-    height: 300px;
+    background: url(../img/img4.jpg);
+    background-repeat: inherit;
+    position: relative;
     grid-column: 1/span 2;
     grid-row: 3/ 3;
+    @media (min-width:768px){
+        grid-column: 1/1;
+        grid-row: 1/span 3;
+    }
+}
+.album--img img{
+    position: absolute;
+}
+.album--imgTwo{
+    background: url(../img/img6.jpg);
+    display: none;
+    @media (min-width:768px){
+        display: block;
+        grid-column: 3/3;
+        grid-row: 1/span 3;
+    }
+
 }
 .tickets{
     padding: 30px;
@@ -73,13 +143,23 @@ h4{
     text-align: center;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     background: #E95600;
+    position: relative;
     width: 200px;
-    &:hover{
-        transition: 0.7s;
-        background: #39566B;
+    @media (min-width:768px){
+     //   background: url('../img/img4.jpg');
+        filter: blur(2px);
+        -webkit-filter: blur(1px);
+        grid-column: 2/ 2;
+        grid-row: 3/ 3;
+        height: 370px;
+        width: 370px;
+    }
+    @media (min-width:1200px){
+        background: #E3A53A;
     }
 }
-a{ 
+.tickets a{ 
+    position: absolute;
     font-family: $font--title;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
@@ -87,6 +167,25 @@ a{
     text-transform: capitalize;
     color: #E3A53A;
     font-size: 50px;
-    text-decoration: none;
-    
+    text-decoration: none; 
+    top: 30px;
+    left: 110px;
+    @media (min-width:768px){
+        padding: 8px;
+      border: 3px solid #E3A53A;
+        margin: 0 auto;
+        top: 180px;
+        left: 90px;
+        font-size: 70px;
+        font-weight: 700;
+        writing-mode: initial;
+        transform: initial;
+        background-color: rgba(119, 119, 119, 0.568); /* Fallback color */
+        background-color: rgba(126, 126, 126, 0.205);
+    } 
+    @media (min-width:1200px){
+        border: 3px solid #E95600;
+        color: #E95600;
+
+    } 
 }

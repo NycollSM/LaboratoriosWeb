@@ -18,10 +18,10 @@ body{
     font-size: 1em;
 }
 h1{
+    grid-column: 2/span 3;
     font-family: $font-titles;
     color: black;
-    text-align: center;
-    font-size: 2em; 
+    float: left;
     padding-top: 40px;
     text-decoration: underline;
 }
@@ -40,7 +40,7 @@ img{
 .content{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10% 70% 10% 10%;
+    grid-template-rows: repeat(4, auto);
     grid-gap: 15px;
     text-align: center;
 } 
@@ -49,7 +49,6 @@ header{
     grid-row: 1/ 1;
     text-align: center;
     background-position: bottom;
-    border-bottom: 1px solid #656565;
 }
 
 h4{
@@ -57,11 +56,21 @@ h4{
 }
 
 footer{
-    background: #52489c;
-    height: 100px;
-    grid-column: 3/4;
-    grid-row: 1/ span 3;
-    }
+    background: url('../img/bgfooter1.jpg');
+    background-position: center;
+    grid-column: 1/span 3;
+    grid-row: 3/ 4;
+}
+.menu{
+    background: url('../img/iconos/001-menu.png');
+    background-repeat: no-repeat;
+    height: 68px;
+    width: 68px;
+    grid-column: 1/1;
+}
+.menu ul{
+    display: none;
+}
 .mainContent{
     height: auto;
     grid-column: 1/ span 3;
@@ -69,7 +78,7 @@ footer{
 }
 
 .slidebar{
-   margin-top: 70px;
+    margin-top: 70px;
 }
 .slidebar > img{
     margin-top: 20px;
@@ -95,4 +104,29 @@ footer{
 }
 .related-post{
     padding: 2%;
+}
+.links--footer{
+    padding: 20px;
+}
+.links--footer li{
+    margin: 10px;
+    display: inline-block;
+    height: 68px;
+    width: 68px;
+    background-repeat: no-repeat;
+}
+.fb{
+    background: url('../img/iconos/fb2.png');
+    
+}
+.twitter{
+    background: url('../img/iconos/twitter2.png');
+}
+footer p{
+    text-align: justify;
+    padding: 5px;
+    font-size: 10px;
+}
+a{
+    color: white;
 }
